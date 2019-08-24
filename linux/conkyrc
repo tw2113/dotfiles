@@ -252,6 +252,6 @@ ${color1} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 
 ${color4}Misc ${hr 2}
 ${color3}CPU TEMP: ${color2}${acpitemp}F
-${color3}BATT: ${if_match "${battery_percent}"<="80"}${color4}${if_match "${battery_percent}"<="50"}${color1}${if_match "${battery_percent}"<="20"}${color2}${endif}
+${color3}BATT: ${if_match "${battery_percent}"<="70"}${color1}${if_match "${battery_percent}"<="40"}${color2}${else}${color4}${endif}
 ${battery_bar 10,350}
 ${color3}EST TIME: ${color2}${battery_time} ${battery_percent}%
