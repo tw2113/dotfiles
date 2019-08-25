@@ -215,7 +215,7 @@ ${color3}UPTIME: ${color2}$uptime
 
 ${color4}Monitors ${hr 2}
 ${color3}CPU: ${color1}
-${cpugraph 10,350 ff0000 ff00ff} 
+${cpugraph 10,260 ff0000 ff00ff}
 ${color3}RAM : ${color2}$mem${color1}/${color2}$memmax ${color1}- ${color2}$memperc%
 ${color3}SWAP: ${color2}$swap${color1}/${color2}$swapmax ${color1}   - ${color2}$swapperc%
 ${color3}LOAD: ${color1}( ${color2}$loadavg ${color1})
@@ -224,24 +224,24 @@ ${color3}PROCESSES: ${color2}$processes	${color3}Running: ${color2}$running_proc
 ${color4}NET ${hr 2}
 ${color4}Wired
 ${color3}DOWN: ${color2}${downspeedf enp0s31f6} KiB/s ${color3}${alignr}UP: ${color2}${upspeedf enp0s31f6} KiB/s
-${color1}${downspeedgraph enp0s31f6 10,350 bb0000 FF00AD}
-${color1}${upspeedgraph enp0s31f6 10,350 FF00AD bb0000}
+${color1}${downspeedgraph enp0s31f6 10,260 bb0000 FF00AD}
+${color1}${upspeedgraph enp0s31f6 10,260 FF00AD bb0000}
 ${color3}TOTAL UP: ${color2}${totaldown enp0s31f6} ${color3}${alignr}TOTAL DOWN: ${color2}${totalup enp0s31f6}
 
 ${color4}Wireless
 ${color3}DOWN: ${color2}${downspeedf wlp0s20f3} KiB/s ${color3}${alignr}UP: ${color2}${upspeedf wlp0s20f3} KiB/s
-${color1}${downspeedgraph wlp0s20f3 10,350 bb0000 FF00AD}
-${color1}${upspeedgraph wlp0s20f3 10,350 FF00AD bb0000}
+${color1}${downspeedgraph wlp0s20f3 10,260 bb0000 FF00AD}
+${color1}${upspeedgraph wlp0s20f3 10,260 FF00AD bb0000}
 ${color3}TOTAL UP: ${color2}${totaldown wlp0s20f3} ${color3}${alignr}TOTAL DOWN: ${color2}${totalup wlp0s20f3}
 
 ${color4}Addresses ${hr 2}
-${color3}WIRED: ${color2}${addr enp0s31f6} | ${color3}${alignr}WIRELESS: ${color2}${addr wlp0s20f3}
+${color3}WIRED: ${color2}${addr enp0s31f6}${color1} | ${color3}${alignr}WIRELESS: ${color2}${addr wlp0s20f3}
 
 ${color4}Free Space ${hr 2}
 ${color3}/: ${color2}${fs_used /}${color1}/${color2}${fs_size /} ${color1}(${color2}${fs_free /} ${fs_free_perc /}% ${color1} free)
-${fs_bar 10,350 /}
+${fs_bar 10,260 /}
 ${color3}~: ${color2}${fs_used /home/tw2113}${color1}/${color2}${fs_size /home/tw2113} ${color1}(${color2}${fs_free /home/tw2113} ${fs_free_perc /home/tw2113}% ${color1} free)
-${fs_bar 10,350 /home/tw2113}
+${fs_bar 10,260 /home/tw2113}
 
 ${color4}Processes ${hr 2}
 ${color2}                    PID   CPU%   MEM%
@@ -251,7 +251,5 @@ ${color1} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color1} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 
 ${color4}Misc ${hr 2}
-${color3}CPU TEMP: ${color2}${acpitemp}F
-${color3}BATT: ${if_match "${battery_percent}"<="70"}${color1}${if_match "${battery_percent}"<="40"}${color2}${else}${color4}${endif}
-${battery_bar 10,350}
-${color3}EST TIME: ${color2}${battery_time} ${battery_percent}%
+${color3}CPU TEMP: ${color2}${acpitemp}F ${color3}
+${color3}Batt: ${color2}${battery_percent}% ${if_match "${battery_percent}"<="70"}${color1}${if_match "${battery_percent}"<="40"}${color2}${else}${color4}${endif}${battery_bar 10,200}
