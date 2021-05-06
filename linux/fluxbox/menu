@@ -42,6 +42,10 @@
 [submenu] (Development)
       [exec] (Filezilla) {filezilla}
 [end]
+[submenu] (Games)
+      [exec] (Minesweeper) {kmines}
+      [exec] (Solitaires) {kpat}
+[end]
 [submenu] (Multimedia)
 [submenu] (Graphics)
       [exec]   (gimp) {gimp} 
