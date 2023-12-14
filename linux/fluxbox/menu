@@ -21,7 +21,7 @@
       [separator]
       [exec] (Firefox) {./firefox-developer-edition/firefox}
       [exec] (Thunderbird) {thunderbird}
-      [exec] (PHPStorm) {/usr/local/bin/pstorm}
+      [exec] (PHPStorm) {/home/tw2113/phpstorm/phpstorm2023.3.1/bin/phpstorm.sh}
       [exec] (Sublime) {subl}
       [exec] (VSCode) {code}
       [exec] (Spotify) {spotify}
@@ -45,6 +45,8 @@
 [submenu] (Games)
       [exec] (Minesweeper) {kmines}
       [exec] (Solitaires) {kpat}
+      [exec] (2048) {gnome-2048}
+      [exec] (Sudoku) {gnome-sudoku}
 [end]
 [submenu] (Multimedia)
 [submenu] (Graphics)
@@ -52,7 +54,7 @@
       [exec]   (inkscape) {inkscape} 
 [end]
 [submenu] (Audio/Video)
-        [exec]   (Audacity) {audacity}
+	  [exec]   (Audacity) {audacity}
       [exec]   (vlc) {vlc} 
 [end]
 [submenu] (X-utils)
@@ -84,7 +86,7 @@
       [restart] (Restart) 
       [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center} 
       [separator] 
-      [exit] (Logout)
+      [exit] (Logout) 
 [end]
 [endencoding]
 [end]
