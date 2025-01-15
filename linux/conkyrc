@@ -213,7 +213,7 @@ conky.config = {
 };
 
 conky.text = [[
-${color2}[${color1}$nodename${color2} - ${color1}${exec hostnamectl | grep System | cut -c19-33}${color2}]
+${color2}[${color1}$nodename${color2} - ${color1}${exec hostnamectl | grep System | cut -c23-37}${color2}]
 ${color3}UPTIME: ${color2}$uptime
 
 ${color4}Monitors ${hr 2}
